@@ -27,6 +27,30 @@
   box-sizing: border-box;
 }
 
+/* Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-500) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green-500);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-700);
+}
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -2242,12 +2266,14 @@ svg {
   position: absolute;
   right: 0;
   bottom: 0;
-  color: rgba(255, 255, 255, .09);
+  color: rgba(255, 255, 255, .07);
   font-size: clamp(6rem, 18vw, 17rem);
   font-weight: 800;
   line-height: .8;
   letter-spacing: -.09em;
   white-space: nowrap;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
 }
 
 .footer__logo-link {
@@ -2418,6 +2444,16 @@ svg {
   :root {
     --container: calc(100% - 32px);
     --gutter: 32px;
+  }
+
+  .final-cta {
+    overflow: visible;
+  }
+
+  .fc-one {
+    top: -22px;
+    right: 60%;
+    z-index: 20;
   }
 
   .section {
@@ -2756,7 +2792,7 @@ svg {
   }
 
   body {
-    padding-bottom: 76px;
+    padding-bottom: 0;
   }
 
   h1 {
