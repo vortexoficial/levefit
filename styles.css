@@ -2326,25 +2326,35 @@ svg {
   bottom: 28px;
   z-index: 190;
   display: grid;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   place-items: center;
-  background: #25a244;
+  /* Verde oficial da marca (#25D366), com leve profundidade. */
+  background: linear-gradient(160deg, #2ee06a 0%, #25d366 45%, #1faa52 100%);
   border-radius: 50%;
   color: #fff;
-  box-shadow: 0 6px 20px rgba(37, 162, 68, .4), 0 2px 8px rgba(0,0,0,.15);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, .38), 0 2px 6px rgba(0, 0, 0, .18);
   transition: transform 200ms ease, box-shadow 200ms ease;
   text-decoration: none;
 }
 
 .whatsapp-btn svg {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+  /* O glifo tem peso visual à esquerda; compensa para centrar de fato. */
+  margin-left: 1px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .12));
 }
 
-.whatsapp-btn:hover {
+.whatsapp-btn:hover,
+.whatsapp-btn:focus-visible {
   transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 10px 28px rgba(37, 162, 68, .5), 0 4px 12px rgba(0,0,0,.18);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, .5), 0 4px 12px rgba(0, 0, 0, .2);
+}
+
+.whatsapp-btn:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, .45);
+  outline-offset: 3px;
 }
 
 .reveal {
