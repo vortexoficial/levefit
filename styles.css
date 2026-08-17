@@ -2343,9 +2343,16 @@ svg {
     transform 180ms ease;
 }
 
+/* A regra global de svg desta página é para ícones de traço (width/height 1em,
+   fill: none, stroke). Este glifo é cheio, então precisa desfazer os quatro —
+   sem zerar o stroke o contorno engrossa o desenho, e sem a altura o ícone
+   encolhe para 1em. */
 .whatsapp-btn svg {
+  display: block;
   width: 29px;
+  height: 29px;
   fill: currentColor;
+  stroke: none;
 }
 
 .whatsapp-btn:hover {
