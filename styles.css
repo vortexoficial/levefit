@@ -3095,16 +3095,14 @@ svg {
     gap: 12px;
   }
 
+  /* Mesmo tamanho da landing do LT Gloss (52px/29px). O `bottom` é o único
+     valor que diverge de propósito: aqui a barra fixa do kit ocupa o rodapé,
+     então o botão sobe para não ficar por cima dela. */
   .whatsapp-btn {
     bottom: 96px;
     right: 16px;
-    width: 46px;
-    height: 46px;
-  }
-
-  .whatsapp-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 52px;
+    height: 52px;
   }
 
   .sticky-mobile-cta {
